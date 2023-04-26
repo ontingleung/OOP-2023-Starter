@@ -12,4 +12,25 @@ public class Word {
     public String getWord() {
         return word;
     }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+    public ArrayList<Follow> getFollows() {
+        return follows;
+    }
+
+    public void setFollows(ArrayList<Follow> follows) {
+        this.follows = follows;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(word).append(": ");
+        for (Follow follow : follows) {
+            sb.append(follow.toString()).append(" ");
+        }
+        return sb.toString();
+    }
 }
